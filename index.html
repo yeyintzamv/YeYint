@@ -1,70 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ye Yint's personal Linktree with social media and contact links.">
+    <meta property="og:title" content="Ye Yint | Linktree">
+    <meta property="og:description" content="Connect with Ye Yint on various platforms.">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/178581510?v=4">
+    <meta property="og:url" content="http://yourwebsite.com"> <!-- Replace with actual URL -->
     <title>Ye Yint | Linktree</title>
     <!-- Favicon -->
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/178581510?v=4" />
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/178581510?v=4" type="image/png">
     <!-- Font Awesome icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Core theme CSS -->
     <link rel="stylesheet" href="style.css">
-  </head>
-
-  <body>
+    <style>
+        /* Add basic styles or override existing ones here if needed */
+        .popup-close {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
     <!-- Parallax Pixel Background Animation -->
     <section class="animated-background">
-      <div id="stars1"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div>
+        <div id="stars1"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
     </section>
     <!-- End of Parallax Pixel Background Animation -->
 
-    <a id="profilePicture" href="#popup">
-      <img src="https://avatars.githubusercontent.com/u/178581510?v=4" alt="Profile Picture">
+    <a id="profilePicture" href="#popup" aria-label="Profile Picture">
+        <img src="https://avatars.githubusercontent.com/u/178581510?v=4" alt="Profile Picture">
     </a>
 
     <div class="overlay" id="popup">
-      <div class="popup">
-        <div class="popup-photo">
-          <a href="https://avatars.githubusercontent.com/u/178581510?v=4" target="_blank">
-            <img src="https://avatars.githubusercontent.com/u/178581510?v=4" alt="Profile Picture">
-          </a>
+        <div class="popup">
+            <div class="popup-photo">
+                <a href="https://avatars.githubusercontent.com/u/178581510?v=4" target="_blank" aria-label="View full profile picture">
+                    <img src="https://avatars.githubusercontent.com/u/178581510?v=4" alt="Profile Picture">
+                </a>
+            </div>
+            <div class="popup-quote">
+                But... the sensation that I've lost something lingers for a long time after I wake up.
+            </div>
+            <button class="popup-close" aria-label="Close">&times;</button>
         </div>
-        <div class="popup-quote">
-          But... the sensation that I've lost something lingers for a longtime after I wake up.
-        </div>
-        <a class="popup-close" onclick="history.back()">&times;</a>
-      </div>
     </div>
 
     <div id="userName">
-      @YeYint
+        @YeYint
     </div>
 
     <div id="links">
-      <a class="link" href="https://github.com/YeYint89978" target="_blank">
-        <i class="fab fa-github">&nbsp;</i>Github
-      </a>
-      <a class="link" href="https://www.tiktok.com/@yeyint89978" target="_blank">
-        <i class="class="bi bi-tiktok">&nbsp;</i>TikTok
-      </a>
-      <a class="link" href="https://www.facebook.com/YourAnonAlan" target="_blank">
-        <i class="fab fa-facebook">&nbsp;</i>Facebook
-      </a>
-            <a class="link" href="https://www.instagram.com/yeyint89978" target="_blank">
-        <i class="fab fa-instagram">&nbsp;</i>Instagram
-      </a>
-      <a class="link" href="https://myanimelist.net/profile/YeYint899" target="_blank">
-        <i class="fa fa-play-circle">&nbsp;</i>MyAnimeList
-      </a>
+        <a class="link" href="https://github.com/YeYint89978" target="_blank" aria-label="Visit GitHub profile">
+            <i class="fab fa-github"></i>Github
+        </a>
+        <a class="link" href="https://www.tiktok.com/@yeyint89978" target="_blank" aria-label="Visit TikTok profile">
+            <i class="fa-brands fa-tiktok"></i> TikTok
+        </a>
+        <a class="link" href="https://www.facebook.com/YourAnonAlan" target="_blank" aria-label="Visit Facebook profile">
+            <i class="fab fa-facebook"></i>Facebook
+        </a>
+        <a class="link" href="https://www.instagram.com/yeyint89978" target="_blank" aria-label="Visit Instagram profile">
+            <i class="fab fa-instagram"></i>Instagram
+        </a>
+        <a class="link" href="https://myanimelist.net/profile/YeYint899" target="_blank" aria-label="Visit MyAnimeList profile">
+            <i class="fa fa-play-circle"></i>MyAnimeList
+        </a>
     </div>
 
     <div id="hashtag">
-     Age : 23<br>
-     Content Creator,Web/TG-Bot/Android Application Dev<br>
-      #BeHappy❤
+        Age: 23<br>
+        Content Creator, Web/TG-Bot/Android Application Developer<br>
+        #BeHappy❤
     </div>
-  </body>
+
+    <script>
+        document.querySelector('.popup-close').addEventListener('click', function() {
+            document.querySelector('.overlay').style.display = 'none';
+        });
+
+        document.querySelector('#profilePicture').addEventListener('click', function() {
+            document.querySelector('.overlay').style.display = 'block';
+        });
+    </script>
+</body>
 </html>
